@@ -1,0 +1,10 @@
+services:
+  serverless:
+    container_name: ${CONTAINER_NAME}
+    image: ${IMAGE_NAME}
+    tty: true
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NODE_MAJOR: ${NODE_MAJOR}

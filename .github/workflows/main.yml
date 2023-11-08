@@ -1,0 +1,14 @@
+name: CI
+
+on:
+  workflow_dispatch:
+    branches: [ main ]
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    timeout-minutes: 1
+    steps:
+      - name: Dummy
+        run: |
+          echo 123
