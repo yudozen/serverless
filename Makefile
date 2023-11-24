@@ -20,7 +20,9 @@ sh:
 	docker exec -it ${CONTAINER_NAME} /bin/bash
 
 version:
-	docker run --rm ${IMAGE_NAME} --version
+	docker run --rm --entrypoint /bin/bash \
+	${IMAGE_NAME} \
+	-c 'serverless --version && node --version && docker --version'
 
 login:
 	docker login
